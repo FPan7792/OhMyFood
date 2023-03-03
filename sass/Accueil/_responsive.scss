@@ -1,0 +1,113 @@
+@media screen and (min-width: 768px) {
+  main {
+    h2 {
+      text-align: center;
+      width: 100%;
+      font-size: 3rem;
+      padding-top: 0;
+      padding-bottom: 3rem;
+    }
+
+    #localisation {
+      h5 {
+        font-size: 1.8rem;
+      }
+    }
+
+    #exploration {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2.8rem 0;
+      background-color: #f4f4f4;
+
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.7rem;
+      }
+
+      button {
+        font-size: large;
+        height: 5rem;
+        border-radius: 10px;
+        margin: 2rem 0;
+      }
+    }
+
+    #fonctionnement {
+      align-items: center;
+
+      .fonctionnement-cartes-conteneur {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        min-height: 20rem;
+        max-height: 36rem;
+        border-radius: 20px;
+      }
+
+      .fonctionnement-cartes {
+        width: 80%;
+        height: 6rem;
+        margin-left: 4rem;
+
+        span:first-child {
+          padding: 0.1rem;
+          transform: translate(-11px);
+        }
+
+        span:last-child {
+          margin-left: 4rem;
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    #restaurants {
+      padding: 5rem 1.5rem;
+
+      .conteneur-cartes-restaurants {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .carte-restaurant {
+          margin: 2rem;
+          min-width: 30rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    #fonctionnement {
+      .fonctionnement-cartes-conteneur {
+        flex-wrap: wrap;
+        // flex-direction: row;
+        width: 90%;
+        padding: 3rem;
+
+        .fonctionnement-cartes {
+          span:first-child {
+            position: static;
+            // display: none;
+          }
+
+          span:last-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

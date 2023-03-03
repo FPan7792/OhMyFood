@@ -155,3 +155,134 @@ html {
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Shrikhand', cursive;
 // =====================================>
+
+body {
+  /* Lissage des polices */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // Font principale
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+
+  // Principal
+  position: relative;
+  box-sizing: border-box;
+
+  // Taille max
+  max-width: 1440px;
+  margin: 0 auto;
+
+  // HEADER
+  header {
+    nav {
+      width: 100%;
+      height: 6.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+
+      img {
+        width: 16rem;
+      }
+      a {
+        position: absolute;
+        z-index: 1;
+        left: 2rem;
+      }
+    }
+  }
+
+  footer {
+    height: 100%;
+    color: #ffffff;
+    background-color: #404040;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    nav {
+      padding: 1.5em;
+
+      .simple {
+        font-weight: 500;
+      }
+    }
+
+    svg {
+      width: 10rem;
+    }
+    a {
+      display: block;
+      margin: 0.8rem 0;
+
+      i {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  #loader {
+    animation: loader-animation 1s 3s forwards;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+
+    background: rgb(147, 86, 220);
+
+    background: linear-gradient(
+      355deg,
+      rgba(147, 86, 220, 1) 22%,
+      rgba(255, 121, 218, 1) 90%
+    );
+    transition: all 0.2s;
+  }
+}
+
+@keyframes loader-animation {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    z-index: 500;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -500;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    nav {
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    nav {
+      display: none;
+    }
+  }
+}
