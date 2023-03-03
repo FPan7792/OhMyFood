@@ -1,0 +1,33 @@
+@keyframes spin-circle-check {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  1% {
+    opacity: 100%;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 100%;
+  }
+}
+
+@keyframes apparition-titres {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes apparition-recettes {
+  from {
+    opacity: 0%;
+    transform: translateY(0.9rem);
+  }
+  to {
+    opacity: 100%;
+  }
+}

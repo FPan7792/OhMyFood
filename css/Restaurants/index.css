@@ -1,3 +1,272 @@
+@charset "UTF-8";
+main {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+main img {
+  position: absolute;
+  width: 100%;
+  min-width: 400px;
+  z-index: -10;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+}
+main > div {
+  background-color: white;
+  margin-top: 230px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 2.5rem 1.5rem;
+}
+main > div .icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 3rem;
+  margin-right: 1rem;
+}
+main > div .icone:hover .fa-heart:first-child {
+  height: 0;
+  width: 0;
+}
+main > div .icone:hover .fa-heart:last-child {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+main > div .icone .fa-heart:first-child {
+  transition: all 0.5s ease;
+  position: absolute;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+  height: 3rem;
+  width: 3rem;
+}
+main > div .icone .fa-heart:last-child {
+  transition: all 0.5s ease;
+  position: absolute;
+  opacity: 0;
+  color: violet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > div .restaurant-bloc-titre {
+  margin: 1.2rem 0 2.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main > div .restaurant-bloc-titre h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.7rem;
+}
+main > div .restaurant-bloc-titre i {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+main > div h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 3.5rem 0;
+}
+main > div h3::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border-top: #99e2d0 3px solid;
+  width: 40px;
+  top: 130%;
+  left: 0;
+}
+main > div .carte-recette {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  opacity: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+main > div .carte-recette > :first-child {
+  padding: 1.2rem 1.2rem;
+  min-width: 80%;
+  width: 100%;
+}
+main > div .carte-recette > :first-child p {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 1px;
+}
+main > div .carte-recette > :first-child div {
+  display: flex;
+  justify-content: space-between;
+}
+main > div .carte-recette > :first-child div span {
+  font-size: 1.5rem;
+  padding-bottom: 0.1rem;
+}
+main > div .carte-recette > :first-child div :first-child {
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main > div .carte-recette > :first-child div :last-child {
+  font-size: small;
+  font-weight: bold;
+  margin-right: 0.8rem;
+  margin-left: 2.2rem;
+}
+main > div .carte-recette .label-check {
+  color: white;
+  background-color: #99e2d0;
+  width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
+}
+main > div .carte-recette:hover .label-check {
+  width: 20rem;
+}
+main > div .carte-recette:hover .fa-circle-check {
+  animation: spin-circle-check 0.5s forwards;
+}
+main > div #entrées {
+  opacity: 0;
+  animation: apparition-titres 1s ease-out forwards;
+}
+main > div #entrées ~ .carte-recette {
+  animation: apparition-recettes 1.2s 0.5s ease-out forwards;
+}
+main > div #plats {
+  opacity: 0;
+  animation: apparition-titres 1s ease-out forwards;
+}
+main > div #plats ~ .carte-recette {
+  animation: apparition-recettes 1.2s 0.7s ease-out forwards;
+}
+main > div #desserts {
+  opacity: 0;
+  animation: apparition-titres 1s ease-out forwards;
+}
+main > div #desserts ~ .carte-recette {
+  animation: apparition-recettes 1.2s 0.9s ease-out forwards;
+}
+main > div .bouton-commander {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+main > div .bouton-commander button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0 auto;
+  border: none;
+  border-radius: 30px;
+  height: 5rem;
+  margin-bottom: 1rem;
+  padding: 0 5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  background: #9356dc;
+  background: linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
+}
+main > div .bouton-commander button:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
 
+@media screen and (min-width: 1024px) {
+  main > div .carte-recette {
+    margin: 20px auto;
+    height: 80px;
+  }
+  main > div .carte-recette :last-child {
+    font-size: 1.5rem;
+  }
+  main > div .carte-recette p {
+    margin-top: 0.5rem;
+  }
+  main > div .restaurant-bloc-titre h2 {
+    margin: 0 auto;
+    font-size: xx-large;
+  }
+  main > div h3 {
+    font-size: xx-large;
+    font-style: italic;
+    margin-left: 100px;
+  }
+  main > div h3::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    border-top: #99e2d0 6px solid;
+    width: 10%;
+    top: 130%;
+    margin: 0 auto;
+  }
+  main .bouton-commander button {
+    width: 400px;
+  }
+  main .icone {
+    font-size: 1.4rem;
+    right: 70px;
+  }
+}
+@keyframes spin-circle-check {
+  0% {
+    transform: rotate(0deg);
+  }
+  1% {
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 100%;
+  }
+}
+@keyframes apparition-titres {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes apparition-recettes {
+  from {
+    opacity: 0%;
+    transform: translateY(0.9rem);
+  }
+  to {
+    opacity: 100%;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
