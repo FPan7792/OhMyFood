@@ -48,7 +48,7 @@ main #exploration button {
   cursor: pointer;
   transition: all 0.1s ease-in;
   border: none;
-  border-radius: 30px;
+  border-radius: 40px;
   height: 4rem;
   margin-bottom: 1rem;
   padding: 0 2.8rem;
@@ -235,11 +235,14 @@ main #restaurants .conteneur-cartes-restaurants .carte-restaurant .carte-restaur
   main #exploration button {
     font-size: large;
     height: 5rem;
-    border-radius: 10px;
     margin: 2rem 0;
   }
   main #fonctionnement {
     align-items: center;
+  }
+  main #fonctionnement h2 {
+    text-align: left;
+    font-size: 24px;
   }
   main #fonctionnement .fonctionnement-cartes-conteneur {
     display: flex;
@@ -262,10 +265,14 @@ main #restaurants .conteneur-cartes-restaurants .carte-restaurant .carte-restaur
   }
   main #fonctionnement .fonctionnement-cartes span:last-child {
     margin-left: 4rem;
-    font-size: 1.8rem;
+    font-size: 16px;
   }
   main #restaurants {
     padding: 5rem 1.5rem;
+  }
+  main #restaurants h2 {
+    text-align: left;
+    font-size: 24px;
   }
   main #restaurants .conteneur-cartes-restaurants {
     display: flex;
@@ -279,16 +286,66 @@ main #restaurants .conteneur-cartes-restaurants .carte-restaurant .carte-restaur
   }
 }
 @media screen and (min-width: 1024px) {
+  main #exploration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.8rem 0;
+    background-color: #f4f4f4;
+  }
+  main #exploration h2 {
+    margin-bottom: 20px;
+  }
+  main #exploration p {
+    font-size: 1.7rem;
+  }
+  main #exploration button {
+    font-size: medium;
+  }
+  main #fonctionnement {
+    margin: 0;
+    padding: 3rem 10rem;
+  }
+  main #fonctionnement h2 {
+    margin-bottom: 0;
+  }
   main #fonctionnement .fonctionnement-cartes-conteneur {
     flex-wrap: wrap;
-    width: 90%;
-    padding: 3rem;
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+    min-height: 10rem;
+  }
+  main #fonctionnement .fonctionnement-cartes-conteneur .fonctionnement-cartes {
+    flex: 1;
+    width: fit-content;
+  }
+  main #fonctionnement .fonctionnement-cartes-conteneur .fonctionnement-cartes:first-child {
+    margin-left: 0;
   }
   main #fonctionnement .fonctionnement-cartes-conteneur .fonctionnement-cartes span:first-child {
     position: static;
   }
   main #fonctionnement .fonctionnement-cartes-conteneur .fonctionnement-cartes span:last-child {
     margin-left: 0;
+  }
+  main #fonctionnement .fonctionnement-cartes-conteneur .fonctionnement-cartes i {
+    padding: 0 15px;
+  }
+  main #restaurants {
+    padding: 3rem 10rem;
+  }
+  main #restaurants .conteneur-cartes-restaurants {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow: auto;
+  }
+  main #restaurants .conteneur-cartes-restaurants .carte-restaurant {
+    margin: 0;
+    margin-right: 2.5rem;
+    min-width: 30rem;
   }
 }
 

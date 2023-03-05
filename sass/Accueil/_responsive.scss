@@ -34,13 +34,17 @@
       button {
         font-size: large;
         height: 5rem;
-        border-radius: 10px;
         margin: 2rem 0;
       }
     }
 
     #fonctionnement {
       align-items: center;
+
+      h2 {
+        text-align: left;
+        font-size: 24px;
+      }
 
       .fonctionnement-cartes-conteneur {
         display: flex;
@@ -65,13 +69,18 @@
 
         span:last-child {
           margin-left: 4rem;
-          font-size: 1.8rem;
+          font-size: 16px;
         }
       }
     }
 
     #restaurants {
       padding: 5rem 1.5rem;
+
+      h2 {
+        text-align: left;
+        font-size: 24px;
+      }
 
       .conteneur-cartes-restaurants {
         display: flex;
@@ -90,22 +99,78 @@
 
 @media screen and (min-width: 1024px) {
   main {
+    #exploration {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2.8rem 0;
+      background-color: #f4f4f4;
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.7rem;
+      }
+
+      button {
+        font-size: medium;
+      }
+    }
+
     #fonctionnement {
+      margin: 0;
+      padding: 3rem 10rem;
+
+      h2 {
+        margin-bottom: 0;
+      }
+
       .fonctionnement-cartes-conteneur {
         flex-wrap: wrap;
-        // flex-direction: row;
-        width: 90%;
-        padding: 3rem;
+        flex-direction: row;
+        padding: 0;
+        width: 100%;
+        min-height: 10rem;
 
         .fonctionnement-cartes {
+          flex: 1;
+          width: fit-content;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
           span:first-child {
             position: static;
-            // display: none;
           }
 
           span:last-child {
             margin-left: 0;
           }
+
+          i {
+            padding: 0 15px;
+          }
+        }
+      }
+    }
+
+    #restaurants {
+      padding: 3rem 10rem;
+
+      .conteneur-cartes-restaurants {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow: auto;
+
+        .carte-restaurant {
+          margin: 0;
+          margin-right: 2.5rem;
+          min-width: 30rem;
         }
       }
     }
