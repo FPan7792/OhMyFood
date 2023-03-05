@@ -95,6 +95,14 @@
       }
     }
   }
+
+  #footer-links-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -171,6 +179,29 @@
           margin: 0;
           margin-right: 2.5rem;
           min-width: 30rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    nav {
+      margin: 0 150px;
+
+      svg {
+        margin-left: 5rem;
+      }
+    }
+
+    #footer-links-container {
+      justify-content: space-between;
+      flex-direction: row;
+
+      a {
+        width: fit-content;
+
+        i {
+          width: 1rem;
         }
       }
     }

@@ -239,6 +239,10 @@ body #loader {
   header nav {
     display: none;
   }
+
+  footer nav {
+    flex-direction: row-reverse;
+  }
 }
 
 /*# sourceMappingURL=base.css.map */

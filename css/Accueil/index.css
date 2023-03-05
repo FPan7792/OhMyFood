@@ -284,6 +284,14 @@ main #restaurants .conteneur-cartes-restaurants .carte-restaurant .carte-restaur
     margin: 2rem;
     min-width: 30rem;
   }
+
+  #footer-links-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 1024px) {
   main #exploration {
@@ -346,6 +354,23 @@ main #restaurants .conteneur-cartes-restaurants .carte-restaurant .carte-restaur
     margin: 0;
     margin-right: 2.5rem;
     min-width: 30rem;
+  }
+
+  footer nav {
+    margin: 0 150px;
+  }
+  footer nav svg {
+    margin-left: 5rem;
+  }
+  footer #footer-links-container {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  footer #footer-links-container a {
+    width: fit-content;
+  }
+  footer #footer-links-container a i {
+    width: 1rem;
   }
 }
 

@@ -285,4 +285,10 @@ body {
       display: none;
     }
   }
+
+  footer {
+    nav {
+      flex-direction: row-reverse;
+    }
+  }
 }
