@@ -276,6 +276,14 @@ body {
     i {
       margin-right: 1rem;
     }
+
+    #footer-links-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
   }
 }
 
@@ -289,6 +297,29 @@ body {
   footer {
     nav {
       flex-direction: row-reverse;
+      margin: 0 150px;
+    }
+
+    svg {
+      margin-left: 5rem;
+    }
+
+    #footer-links-container {
+      justify-content: space-between;
+      flex-direction: row;
+
+      a {
+        width: fit-content;
+
+        i {
+          width: 1rem;
+        }
+      }
     }
   }
+
+  // footer {
+  //   nav {
+  //   }
+  // }
 }
