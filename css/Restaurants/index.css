@@ -180,7 +180,7 @@ main > div .bouton-commander {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0;
+  padding: 3rem 0;
 }
 main > div .bouton-commander button {
   cursor: pointer;
