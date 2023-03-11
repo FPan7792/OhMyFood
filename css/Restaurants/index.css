@@ -10,13 +10,14 @@ main img {
   position: absolute;
   width: 100%;
   min-width: 400px;
+  max-height: 480px;
   z-index: -10;
   object-fit: cover;
   object-position: center;
   top: 0;
 }
 main > div {
-  background-color: white;
+  background-color: #f7f7f7;
   margin-top: 230px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -79,7 +80,7 @@ main > div h3 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1.6rem;
-  margin: 3.5rem 0;
+  margin: 3.5rem 0 2.5rem;
 }
 main > div h3::after {
   position: absolute;
@@ -179,7 +180,7 @@ main > div .bouton-commander {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0;
+  padding: 3rem 0;
 }
 main > div .bouton-commander button {
   cursor: pointer;
@@ -203,6 +204,12 @@ main > div .bouton-commander button:hover {
 }
 
 @media screen and (min-width: 1024px) {
+  main > div {
+    padding: 5rem 15rem 0;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 380px;
+  }
   main > div .carte-recette {
     margin: 20px auto;
     height: 80px;
@@ -213,26 +220,30 @@ main > div .bouton-commander button:hover {
   main > div .carte-recette p {
     margin-top: 0.5rem;
   }
+  main > div .restaurant-bloc-titre {
+    justify-content: center;
+  }
+  main > div .restaurant-bloc-titre .icone {
+    position: static;
+    margin-left: 30px;
+  }
   main > div .restaurant-bloc-titre h2 {
-    margin: 0 auto;
     font-size: xx-large;
   }
   main > div h3 {
-    font-size: xx-large;
-    font-style: italic;
-    margin-left: 100px;
+    font-size: large;
   }
   main > div h3::after {
     position: absolute;
     content: "";
     display: inline-block;
-    border-top: #99e2d0 6px solid;
-    width: 10%;
+    border-top: #99e2d0 4px solid;
+    width: 7%;
     top: 130%;
     margin: 0 auto;
   }
   main .bouton-commander button {
-    width: 400px;
+    width: 200px;
   }
   main .icone {
     font-size: 1.4rem;

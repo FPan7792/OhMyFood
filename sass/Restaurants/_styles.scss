@@ -4,6 +4,7 @@ $pricipal_rose: #ff79da;
 $pricipal_vert: #99e2d0;
 $fond_blanc: white;
 $fond_gris: #f1f1f1;
+$fond_gris_card: #f7f7f7;
 // --------
 
 main {
@@ -17,6 +18,7 @@ main {
     position: absolute;
     width: 100%;
     min-width: 400px;
+    max-height: 480px;
     z-index: -10;
     object-fit: cover;
     object-position: center;
@@ -24,7 +26,7 @@ main {
   }
 
   > div {
-    background-color: $fond_blanc;
+    background-color: $fond_gris_card;
     margin-top: 230px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -83,7 +85,6 @@ main {
       align-items: center;
 
       h2 {
-        // text-transform: capitalize;
         font-family: "Shrikhand", cursive;
         font-size: 2.7rem;
       }
@@ -99,7 +100,7 @@ main {
       text-transform: uppercase;
       font-weight: 400;
       font-size: 1.6rem;
-      margin: 3.5rem 0;
+      margin: 3.5rem 0 2.5rem;
 
       &::after {
         position: absolute;
@@ -215,7 +216,7 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 3rem 0;
+      padding: 3rem 0;
 
       button {
         cursor: pointer;
@@ -249,10 +250,13 @@ main {
 @media screen and (min-width: 1024px) {
   main {
     > div {
+      padding: 5rem 15rem 0;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 380px;
+
       .carte-recette {
-        // width: 70%;
         margin: 20px auto;
-        // border: black 1px solid;
         height: 80px;
 
         :last-child {
@@ -264,22 +268,28 @@ main {
         }
       }
 
-      .restaurant-bloc-titre h2 {
-        margin: 0 auto;
-        font-size: xx-large;
+      .restaurant-bloc-titre {
+        justify-content: center;
+        .icone {
+          position: static;
+          margin-left: 30px;
+        }
+
+        h2 {
+          // margin: 0 auto;
+          font-size: xx-large;
+        }
       }
 
       h3 {
-        font-size: xx-large;
-        font-style: italic;
-        margin-left: 100px;
+        font-size: large;
 
         &::after {
           position: absolute;
           content: "";
           display: inline-block;
-          border-top: #99e2d0 6px solid;
-          width: 10%;
+          border-top: #99e2d0 4px solid;
+          width: 7%;
           top: 130%;
           margin: 0 auto;
         }
@@ -287,7 +297,7 @@ main {
     }
 
     .bouton-commander button {
-      width: 400px;
+      width: 200px;
     }
 
     .icone {
