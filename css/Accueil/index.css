@@ -351,7 +351,7 @@ main #restaurants .conteneur-cartes-restaurants .carte-restaurant .carte-restaur
     overflow: auto;
   }
   main #restaurants .conteneur-cartes-restaurants .carte-restaurant {
-    margin: 0;
+    margin: 15px 5px;
     margin-right: 2.5rem;
     min-width: 30rem;
   }
