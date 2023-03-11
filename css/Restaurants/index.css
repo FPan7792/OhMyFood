@@ -10,13 +10,14 @@ main img {
   position: absolute;
   width: 100%;
   min-width: 400px;
+  max-height: 480px;
   z-index: -10;
   object-fit: cover;
   object-position: center;
   top: 0;
 }
 main > div {
-  background-color: white;
+  background-color: #f7f7f7;
   margin-top: 230px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -205,6 +206,9 @@ main > div .bouton-commander button:hover {
 @media screen and (min-width: 1024px) {
   main > div {
     padding: 5rem 15rem 0;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 380px;
   }
   main > div .carte-recette {
     margin: 20px auto;

@@ -4,6 +4,7 @@ $pricipal_rose: #ff79da;
 $pricipal_vert: #99e2d0;
 $fond_blanc: white;
 $fond_gris: #f1f1f1;
+$fond_gris_card: #f7f7f7;
 // --------
 
 main {
@@ -17,6 +18,7 @@ main {
     position: absolute;
     width: 100%;
     min-width: 400px;
+    max-height: 480px;
     z-index: -10;
     object-fit: cover;
     object-position: center;
@@ -24,7 +26,7 @@ main {
   }
 
   > div {
-    background-color: $fond_blanc;
+    background-color: $fond_gris_card;
     margin-top: 230px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -249,6 +251,9 @@ main {
   main {
     > div {
       padding: 5rem 15rem 0;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 380px;
 
       .carte-recette {
         margin: 20px auto;
